@@ -9,6 +9,6 @@ namespace AspNetMVC_BanzHow.Models
     {
         public int UrunSayisi { get; set; }
         public List<Urun> Urunler { get; set; }
-        public List<Kategori> Kategoriler { get; set; }
+        //public List<Kategori> Kategoriler { get; set; }
     }
 }

@@ -26,17 +26,11 @@ namespace AspNetMVC_BanzHow.Controllers
                 new Urun(){UrunId=9,UrunAdi="Iphone 7S",Aciklama="İdare eder",Fiyat=3000,Satistami=false}
             };
 
-            List<Kategori> kategoriler = new List<Kategori>()
-            {
-                new Kategori(){Id=1,KategoriAdi="Telefon"},
-                new Kategori(){Id=1,KategoriAdi="Tablet"},
-                new Kategori(){Id=1,KategoriAdi="Laptop"}
-            };
+
 
             UrunKategoriModel model = new UrunKategoriModel();
             model.UrunSayisi = urunler.Count();
             model.Urunler = urunler;
-            model.Kategoriler = kategoriler;
 
 
             //ViewBag.UrunSayisi = urunler.Count();

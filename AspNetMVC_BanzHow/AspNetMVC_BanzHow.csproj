@@ -88,11 +88,68 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="banzhow\404.html" />
+    <Content Include="banzhow\blog-home-1.html" />
+    <Content Include="banzhow\blog-post.html" />
+    <Content Include="banzhow\contact.html" />
+    <Content Include="banzhow\css\bootstrap.css" />
+    <Content Include="banzhow\css\font-awesome.min.css" />
+    <Content Include="banzhow\css\fonts\font-awesome\fontawesome-webfontba72.svg" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-bold-webfont.svg" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-bolditalic-webfont.svg" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-italic-webfont.svg" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-light-webfont.svg" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-lightitalic-webfont.svg" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-regular-webfont.svg" />
+    <Content Include="banzhow\css\fonts\pacifico\pacifico-webfont.svg" />
+    <Content Include="banzhow\css\style.css" />
+    <Content Include="banzhow\faq.html" />
+    <Content Include="banzhow\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="banzhow\fonts\glyphicons-halflings-regular-3.html" />
+    <Content Include="banzhow\fonts\glyphicons-halflings-regular-4.html" />
+    <Content Include="banzhow\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="banzhow\fonts\glyphicons-halflings-regulard41d.html" />
+    <Content Include="banzhow\full-width.html" />
+    <Content Include="banzhow\img\client-1.png" />
+    <Content Include="banzhow\img\client-2.png" />
+    <Content Include="banzhow\img\client-3.png" />
+    <Content Include="banzhow\img\client-4.png" />
+    <Content Include="banzhow\img\client-5.png" />
+    <Content Include="banzhow\img\client-6.png" />
+    <Content Include="banzhow\img\monster.png" />
+    <Content Include="banzhow\img\portfolio_1.png" />
+    <Content Include="banzhow\img\portfolio_2.png" />
+    <Content Include="banzhow\img\portfolio_3.png" />
+    <Content Include="banzhow\img\portfolio_4.png" />
+    <Content Include="banzhow\img\portfolio_5.png" />
+    <Content Include="banzhow\img\portfolio_6.png" />
+    <Content Include="banzhow\img\post1.png" />
+    <Content Include="banzhow\img\post2.png" />
+    <Content Include="banzhow\img\post3.png" />
+    <Content Include="banzhow\img\section-bg.png" />
+    <Content Include="banzhow\img\slide\slide1.png" />
+    <Content Include="banzhow\img\slide\slide2.png" />
+    <Content Include="banzhow\img\slide\slide3.png" />
+    <Content Include="banzhow\index.html" />
+    <Content Include="banzhow\js\banzhow.js" />
+    <Content Include="banzhow\js\bootstrap.js" />
+    <Content Include="banzhow\js\jquery-1.10.2.js" />
+    <Content Include="banzhow\js\plugins.js" />
+    <Content Include="banzhow\js\switcher\switcher.css" />
+    <Content Include="banzhow\js\switcher\switcher.js" />
+    <Content Include="banzhow\portfolio-1-col.html" />
+    <Content Include="banzhow\portfolio-2-col.html" />
+    <Content Include="banzhow\portfolio-3-col.html" />
+    <Content Include="banzhow\portfolio-item.html" />
+    <Content Include="banzhow\services.html" />
+    <Content Include="banzhow\sidebar.html" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -100,7 +157,44 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="banzhow\css\fonts\font-awesome\fontawesome-webfontba72.eot" />
+    <Content Include="banzhow\css\fonts\font-awesome\fontawesome-webfontba72.ttf" />
+    <Content Include="banzhow\css\fonts\font-awesome\fontawesome-webfontba72.woff" />
+    <Content Include="banzhow\css\fonts\font-awesome\fontawesome-webfontd41d.eot" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-bold-webfont.eot" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-bold-webfont.ttf" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-bold-webfont.woff" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-bold-webfontd41d.eot" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-bolditalic-webfont.eot" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-bolditalic-webfont.ttf" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-bolditalic-webfont.woff" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-bolditalic-webfontd41d.eot" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-italic-webfont.eot" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-italic-webfont.ttf" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-italic-webfont.woff" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-italic-webfontd41d.eot" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-light-webfont.eot" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-light-webfont.ttf" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-light-webfont.woff" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-light-webfontd41d.eot" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-lightitalic-webfont.eot" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-lightitalic-webfont.ttf" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-lightitalic-webfont.woff" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-lightitalic-webfontd41d.eot" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-regular-webfont.eot" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-regular-webfont.ttf" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-regular-webfont.woff" />
+    <Content Include="banzhow\css\fonts\opensans\opensans-regular-webfontd41d.eot" />
+    <Content Include="banzhow\css\fonts\pacifico\pacifico-webfont.eot" />
+    <Content Include="banzhow\css\fonts\pacifico\pacifico-webfont.ttf" />
+    <Content Include="banzhow\css\fonts\pacifico\pacifico-webfont.woff" />
+    <Content Include="banzhow\css\fonts\pacifico\pacifico-webfontd41d.eot" />
     <None Include="packages.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,7 +204,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

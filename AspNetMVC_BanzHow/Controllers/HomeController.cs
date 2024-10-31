@@ -33,11 +33,18 @@ namespace AspNetMVC_BanzHow.Controllers
                 new Kategori(){Id=1,KategoriAdi="Laptop"}
             };
 
-            ViewBag.UrunSayisi = urunler.Count();
-            ViewBag.Kategoriler = kategoriler;
+            UrunKategoriModel model = new UrunKategoriModel();
+            model.UrunSayisi = urunler.Count();
+            model.Urunler = urunler;
+            model.Kategoriler = kategoriler;
 
 
-            return View(urunler);
+            //ViewBag.UrunSayisi = urunler.Count();
+            //ViewBag.Kategoriler = kategoriler;
+
+            //return View(urunler);
+            return View(model);
+            
         }
 
         public ActionResult Services()

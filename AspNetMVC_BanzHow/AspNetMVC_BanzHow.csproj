@@ -156,6 +156,7 @@
     </Compile>
     <Compile Include="Models\Kategori.cs" />
     <Compile Include="Models\Urun.cs" />
+    <Compile Include="Models\UrunKategoriModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

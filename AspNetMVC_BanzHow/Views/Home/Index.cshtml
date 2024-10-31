@@ -1,5 +1,5 @@
 ﻿@using AspNetMVC_BanzHow.Models
-@model List<Urun>
+@model UrunKategoriModel
 @{
     ViewBag.Title = "Index";
 
@@ -8,13 +8,13 @@
 <h2>Kurslar</h2>
 <hr />
 <div class="alert alert-success" role="alert">
-    <strong>@ViewBag.UrunSayisi</strong> adet ürün listelendi.
+    <strong>@Model.UrunSayisi</strong> adet ürün listelendi.
 </div>
 
 <div class="row">
     <div class="col-md-3">
         <div class="list-group">
-            @foreach (var kategori in (List<Kategori>)ViewBag.Kategoriler)
+            @foreach (var kategori in Model.Kategoriler)
             {
                 <a href="#" class="list-group-item">
                     @kategori.KategoriAdi
@@ -24,7 +24,7 @@
     </div>
 
     <div class="col-md-9">
-        @foreach (var urun in Model)
+        @foreach (var urun in Model.Urunler)
         {
             if (urun.Satistami == true)
             {

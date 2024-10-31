@@ -11,7 +11,8 @@ namespace AspNetMVC_BanzHow.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            string[] kurslar = { "MVC kursu", "web forms", "c# kursu", "MVC kursu", "web forms", "c# kursu" };
+            return View(kurslar);
         }
 
         public ActionResult Services()

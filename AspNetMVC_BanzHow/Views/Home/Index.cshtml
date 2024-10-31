@@ -1,7 +1,7 @@
-﻿@{ 
+﻿@model string[]
+@{ 
     ViewBag.Title = "Index";
 
-    string[] kurslar = { "MVC kursu", "web forms","c# kursu" };
 }
 
 <h2>Kurslar</h2>
@@ -9,7 +9,7 @@
 
 
 <ul>
-    @foreach (var kurs in kurslar)
+    @foreach (var kurs in Model)
     {
         <li>
             @kurs

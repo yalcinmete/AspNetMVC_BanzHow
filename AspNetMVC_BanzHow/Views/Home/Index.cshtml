@@ -10,13 +10,10 @@
 <div class="alert alert-success" role="alert">
     <strong>@Model.UrunSayisi</strong> adet ürün listelendi.
 </div>
+        @*Html.Partial("KategoriMenu",Model.Kategoriler)*@
 
-<div class="row">
-    <div class="col-md-3">
-        @Html.Action("KategoriMenu","Kategori")
-    </div>
+        @*//PartialViewResult action oluşturmadan da partialview'e model gönderebiliyorsun ama tek bir yerden kontrol edebilmek için partialViewResult kullanıyoruz.*@
 
-    <div class="col-md-9">
         @foreach (var urun in Model.Urunler)
         {
             if (urun.Satistami == true)
@@ -41,7 +38,3 @@
                 </div>
             }
         }
-    </div>
-
-
-</div>

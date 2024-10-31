@@ -15,6 +15,8 @@ namespace AspNetMVC_BanzHow.Controllers
             return View();
         }
 
+        //PartialViewResult action oluşturmadan da partialview'e model gönderebiliyorsun ama tek bir yerden kontrol edebilmek için partialViewResult kullanıyoruz.
+
         [ChildActionOnly]
         public PartialViewResult KategoriMenu()
         {

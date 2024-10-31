@@ -50,5 +50,10 @@ namespace AspNetMVC_BanzHow.Controllers
         {
             return View();
         }
+
+        public ActionResult About() 
+        {
+            return View();
+        }
     }
 }

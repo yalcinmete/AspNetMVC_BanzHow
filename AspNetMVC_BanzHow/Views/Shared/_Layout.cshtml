@@ -36,6 +36,11 @@
     <script type="text/javascript" src="/banzhow/js/boxsizing/jquery.boxsizing.js"></script>
     <![endif]-->
     <script type="text/javascript" src="/banzhow/js/banzhow.js"></script>
+    <style>
+        body {
+            margin-top: 15px;
+        }
+    </style>
 </head>
 
 
@@ -101,9 +106,27 @@
     </nav>
 
     <div class="container body-content">
-        @RenderBody()
+        @if (IsSectionDefined("Kategori"))
+        {
+            <div class="row">
+                <div class="col-md-3">
+                    @*//PartialViewResult action oluşturmadan da partialview'e model gönderebiliyorsun ama tek bir yerden kontrol edebilmek için partialViewResult kullanıyoruz.*@
+                    @RenderSection("Kategori", false)
+                </div>
+                <div class="col-md-9">
+                    @RenderBody()
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    @RenderBody()
+                </div>
+            </div>
+        }
     </div>
-
 
     @*@Html.Partial("_Footer")*@
 

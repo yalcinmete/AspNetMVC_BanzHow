@@ -204,6 +204,7 @@
     <Content Include="Views\Shared\_Carousel.cshtml" />
     <Content Include="Views\Shared\_RecentProjects.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\KategoriMenu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

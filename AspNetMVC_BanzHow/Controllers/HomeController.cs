@@ -13,11 +13,18 @@ namespace AspNetMVC_BanzHow.Controllers
         public ActionResult Index()
         { 
             UrunKategoriModel model = new UrunKategoriModel();
-            model.UrunSayisi = Veritabanı.Liste.Count();
-            model.Urunler = Veritabanı.Liste;
+            model.UrunSayisi = Veritabanı.Liste.Where(i => i.Satistami == true).Count();
+            model.Urunler = Veritabanı.Liste.Where(i=>i.Satistami == true ).ToList();
 
             return View(model);
             
+        }
+
+        public ActionResult Details(int id)
+        {
+            var urun = Veritabanı.Liste.Where(i=>i.UrunId==id).FirstOrDefault();
+
+            return View(urun);
         }
 
         public ActionResult Services()

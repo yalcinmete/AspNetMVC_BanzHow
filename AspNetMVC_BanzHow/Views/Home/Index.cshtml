@@ -7,8 +7,10 @@
 
 <h2>Kurslar</h2>
 <hr />
-<div class="alert alert-success" role="alert">
-    <strong>@Model.UrunSayisi</strong> adet ürün listelendi.
+<div class="col-md-12">
+    <div class="alert alert-success" role="alert">
+        <strong>@Model.UrunSayisi</strong> adet ürün listelendi.
+    </div>
 </div>
         @*Html.Partial("KategoriMenu",Model.Kategoriler)*@
 
@@ -16,8 +18,6 @@
 
         @foreach (var urun in Model.Urunler)
         {
-            if (urun.Satistami == true)
-            {
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
                         <img src="	https://placehold.co/350x150/EEE/31343C" alt="...">
@@ -32,9 +32,13 @@
                             {
                                 @urun.Aciklama
                             }
-                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                            @*<p><a href="/Home/Details/?id=@urun.UrunId" class="btn btn-primary" role="button">Button</a></p>*@ 
+                            @*query stringin bizim route ayarlamalarıyla alakası yok istediğimiz kadar qurey string gönderebiliyoruz.Tabi aralarına & koymak lazım.& ekleyerek kategori de ekleyebilirsin ama controller action parametresinin ismi de aynı olmalı*@
+                            <p><a href="/Home/Details/@urun.UrunId" class="btn btn-primary" role="button">Button</a></p>
+
+                            @*veya ;*@
+                            @Html.ActionLink("Ürünü İncele", "Details", new {id=@urun.UrunId},new {@class="btn btn-primary"})
                         </div>
                     </div>
                 </div>
-            }
         }

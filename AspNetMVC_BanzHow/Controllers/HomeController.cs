@@ -27,6 +27,12 @@ namespace AspNetMVC_BanzHow.Controllers
             return View(urun);
         }
 
+
+        public ActionResult UrunEkle()
+        {
+            return View();
+        }
+
         public ActionResult Services()
         {
             return View();

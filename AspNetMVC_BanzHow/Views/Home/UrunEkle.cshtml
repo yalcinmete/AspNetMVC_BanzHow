@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "UrunEkle";
+}
+
+<h2>UrunEkle</h2>
+<hr />
+
+@*@using (Html.BeginForm()) parametreleri vermezsen sayfanın bulunduğu action metoduna form post edilir. *@
+@*@using (Html.BeginForm("UrunEkle","Home",FormMethod.Get)) get metodu ile yazdığın bilgiler arama cubugunda query string olarak gözüküyor.Daha sonra actiondan bu bilgileri alabilirsin.*@
+@using (Html.BeginForm("UrunEkle","Home",FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail4" class="control-label col-md-3">Ürün Adi</label>
+            <div class="col-md-9">
+                @Html.TextBox("UrunAdi", null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail4" class="control-label col-md-3">Ürün Açıklama</label>
+            <div class="col-md-9">
+                @Html.TextArea("UrunAciklama", null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail4" class="control-label col-md-3">Fiyat</label>
+            <div class="col-md-9">
+                @Html.TextBox("Fiyat", null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group ">
+            <label for="inputEmail4" class="control-label col-md-3">Resim</label>
+            <div class="col-md-9">
+                @Html.TextBox("Resim", null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail4" class="control-label col-md-3">Satışta mı ?</label>
+            <div class="col-md-9">
+                Evet :@Html.RadioButton("Satistami", true)
+                Hayır :@Html.RadioButton("Satistami", false)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </div>
+    </div>
+}

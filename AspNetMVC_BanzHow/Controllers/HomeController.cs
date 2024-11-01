@@ -27,10 +27,24 @@ namespace AspNetMVC_BanzHow.Controllers
             return View(urun);
         }
 
-
+        [HttpGet]
         public ActionResult UrunEkle()
         {
             return View();
+        }
+        [HttpPost]
+        //public ActionResult UrunEkle(string UrunAdi,string Aciklama,double Fiyat,string Resim,bool Satistami)
+        public ActionResult UrunEkle(Urun entity)
+        {
+            //Urun entity = new Urun();
+            //entity.UrunAdi = UrunAdi;
+            //entity.Aciklama = Aciklama;
+            //entity.Fiyat = Fiyat;
+            //entity.Resim = Resim;
+            //entity.Satistami = Satistami;
+            Veritabanı.ElemanEkle(entity);
+            return View("UrunListe",Veritabanı.Liste);
+            //return View();
         }
 
         public ActionResult Services()
